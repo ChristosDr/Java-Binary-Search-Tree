@@ -40,6 +40,17 @@ public class Main {
         inOrder(root.right);
     }
 
+    public TreeNode search(TreeNode root, int key){
+        if (root == null || root.data == key){
+            return root;
+        }
+        if (key< root.data){
+            return search(root.left,key);
+        }else {
+            return search(root.right,key);
+        }
+    }
+
     public static void main(String[] args) {
 
         Main sll = new Main();
